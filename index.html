@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary: #0d9488;
@@ -32,14 +34,30 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: 600;
         }
 
-        .text-primary { color: var(--primary) !important; }
-        .text-secondary-color { color: var(--secondary) !important; }
-        .bg-primary { background-color: var(--primary) !important; }
-        .bg-light-theme { background-color: var(--light-bg); }
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        .text-secondary-color {
+            color: var(--secondary) !important;
+        }
+
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+
+        .bg-light-theme {
+            background-color: var(--light-bg);
+        }
 
         .btn-custom {
             background-color: var(--primary);
@@ -59,13 +77,16 @@
             box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3);
         }
 
-        .section-padding { padding: 100px 0; }
+        .section-padding {
+            padding: 100px 0;
+        }
+
         .section-title {
             margin-bottom: 50px;
             position: relative;
             padding-bottom: 15px;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -76,7 +97,7 @@
             background-color: var(--primary);
             border-radius: 2px;
         }
-        
+
         .section-title.text-center::after {
             left: 50%;
             transform: translateX(-50%);
@@ -85,8 +106,8 @@
         /* 1. Hero Section */
         .hero-section {
             position: relative;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%), 
-                        url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%),
+                url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1920&q=80') center/cover;
             padding: 120px 0 100px;
             min-height: 80vh;
             display: flex;
@@ -108,6 +129,7 @@
             background-color: var(--light-bg);
             border: 1px solid #e2e8f0;
         }
+
         .form-control:focus {
             box-shadow: 0 0 0 3px var(--primary-light);
             border-color: var(--primary);
@@ -119,17 +141,17 @@
             position: relative;
             z-index: 10;
         }
-        
+
         .stat-card {
             background: #fff;
             padding: 30px 20px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
             height: 100%;
         }
-        
+
         .stat-card:hover {
             transform: translateY(-5px);
         }
@@ -156,7 +178,7 @@
             transition: all 0.3s ease;
             height: 100%;
         }
-        
+
         .service-card:hover {
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             border-color: var(--primary-light);
@@ -179,7 +201,7 @@
             align-items: flex-start;
             margin-bottom: 30px;
         }
-        
+
         .feature-icon-box {
             background: var(--primary-light);
             color: var(--primary);
@@ -199,11 +221,15 @@
             background: #fff;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
             height: 100%;
         }
-        
-        .stars { color: #facc15; font-size: 0.9rem; margin-bottom: 15px; }
+
+        .stars {
+            color: #facc15;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
 
         .google-badge {
             background: white;
@@ -211,7 +237,7 @@
             border-radius: 50px;
             display: inline-flex;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             font-weight: 500;
         }
 
@@ -221,8 +247,18 @@
             background-color: var(--primary-light);
             box-shadow: none;
         }
-        .accordion-button:focus { box-shadow: none; border-color: rgba(0,0,0,.125); }
-        .accordion-item { border-radius: 10px !important; margin-bottom: 15px; border: 1px solid #e2e8f0; overflow: hidden; }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0, 0, 0, .125);
+        }
+
+        .accordion-item {
+            border-radius: 10px !important;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
 
         /* 8. Contact CTA Section */
         .contact-cta {
@@ -231,7 +267,7 @@
             overflow: hidden;
             box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.3);
         }
-        
+
         .contact-cta-img {
             height: 100%;
             min-height: 400px;
@@ -240,7 +276,7 @@
         }
 
         .highlight-phone {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 15px 25px;
             border-radius: 10px;
             display: inline-flex;
@@ -260,7 +296,7 @@
             flex-direction: column;
             gap: 15px;
         }
-        
+
         .float-btn {
             width: 60px;
             height: 60px;
@@ -270,23 +306,49 @@
             justify-content: center;
             font-size: 1.8rem;
             color: white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
-        
-        .float-btn:hover { transform: scale(1.1); color: white; }
-        .btn-whatsapp { background-color: #25D366; }
-        .btn-call { background-color: var(--primary); }
-        
+
+        .float-btn:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            text-decoration-line: none;
+        }
+
+        .btn-call {
+            background-color: var(--primary);
+            text-decoration-line: none;
+
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark);
             color: #cbd5e1;
             padding: 80px 0 30px;
         }
-        footer h5 { color: white; margin-bottom: 20px; }
-        .footer-link { color: #cbd5e1; text-decoration: none; transition: 0.3s; }
-        .footer-link:hover { color: var(--secondary); padding-left: 5px; }
+
+        footer h5 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
         .social-icons a {
             display: inline-block;
             width: 40px;
@@ -294,28 +356,51 @@
             line-height: 40px;
             text-align: center;
             border-radius: 50%;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             margin-right: 10px;
             transition: 0.3s;
         }
-        .social-icons a:hover { background: var(--primary); }
+
+        .social-icons a:hover {
+            background: var(--primary);
+        }
 
         @media (max-width: 768px) {
             .hero-section {
-                background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                            url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1920&q=80') center/cover;
+                background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                    url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1920&q=80') center/cover;
                 text-align: center;
                 padding-top: 60px;
             }
-            .section-title::after { left: 50%; transform: translateX(-50%); }
-            .hero-section .text-md-start { text-align: center !important; }
-            .stats-wrapper { margin-top: 30px; }
-            .feature-item { flex-direction: column; align-items: center; text-align: center; }
-            .feature-icon-box { margin-right: 0; margin-bottom: 15px; }
+
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero-section .text-md-start {
+                text-align: center !important;
+            }
+
+            .stats-wrapper {
+                margin-top: 30px;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .feature-icon-box {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Minimal Header -->
@@ -335,13 +420,14 @@
             <div class="row align-items-center mt-5">
                 <!-- Left Text -->
                 <div class="col-lg-6 mb-5 mb-lg-0 text-md-start text-center" data-aos="fade-right">
-                    <span class="text-primary fw-bold mb-2 d-block text-uppercase tracking-wider">Top Rated Dental Clinic</span>
-                    <h1 class="display-4 fw-bold mb-4 text-dark">Smile with <br><span class="text-primary">Confidence</span></h1>
-                    <p class="lead text-muted mb-5">Experience world-class dental care at Smile Stone Dental Clinic in Calicut. We bring you advanced treatments, personalized care, and lasting, beautiful smiles.</p>
-                    <a href="#services" class="btn-custom text-decoration-none me-3">Our Services</a>
-                    <a href="tel:1234567890" class="text-dark fw-medium text-decoration-none d-inline-flex align-items-center">
-                        <i class="fas fa-phone text-primary me-2 shadow-sm rounded-circle p-2 bg-white"></i> 123-456-7890
-                    </a>
+                    <span class="text-primary fw-bold mb-2 d-block text-uppercase tracking-wider">Top Rated Dental
+                        Clinic</span>
+                    <h1 class="display-4 fw-bold mb-4 text-dark">Smile with <br><span
+                            class="text-primary">Confidence</span></h1>
+                    <p class="lead text-muted mb-5">Experience world-class dental care at Smile Stone Dental Clinic in
+                        Calicut. We bring you advanced treatments, personalized care, and lasting, beautiful smiles.</p>
+                    <a href="#contact" class="btn-custom text-decoration-none me-3">Contact Us</a>
+
                 </div>
                 <!-- Right Form -->
                 <div class="col-lg-5 offset-lg-1" data-aos="fade-left" id="appointment">
@@ -400,17 +486,25 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
                     <h2 class="section-title">About Smile Stone Dental Clinic</h2>
-                    <p class="text-muted mb-4 lead">Located in the heart of Calicut, we are dedicated to providing the highest standard of dental care to our community.</p>
-                    <p class="text-muted mb-4">At Smile Stone, we combine multi-disciplinary expertise with compassionate patient care. Our state-of-the-art clinic is equipped to handle everything from routine check-ups to complex full-mouth rehabilitations. We prioritize your comfort and ensure every treatment is tailored to your unique needs.</p>
+                    <p class="text-muted mb-4 lead">Located in the heart of Calicut, we are dedicated to providing the
+                        highest standard of dental care to our community.</p>
+                    <p class="text-muted mb-4">At Smile Stone, we combine multi-disciplinary expertise with
+                        compassionate patient care. Our state-of-the-art clinic is equipped to handle everything from
+                        routine check-ups to complex full-mouth rehabilitations. We prioritize your comfort and ensure
+                        every treatment is tailored to your unique needs.</p>
                     <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Experienced & specialized doctors</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Painless & minimal invasive dentistry</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Strict sterilization protocols</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Experienced & specialized
+                            doctors</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Painless & minimal
+                            invasive dentistry</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Strict sterilization
+                            protocols</li>
                     </ul>
-                    <a href="#contact" class="btn-custom text-decoration-none">Contact Us</a>
+                    <a href="#contact" class="btn-custom text-decoration-none">Book Now</a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Dental Team" class="img-fluid rounded-4 shadow">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                        alt="Dental Team" class="img-fluid rounded-4 shadow">
                 </div>
             </div>
         </div>
@@ -428,28 +522,32 @@
                     <div class="service-card text-center">
                         <div class="service-icon"><i class="fas fa-tooth"></i></div>
                         <h5>Root Canal Treatment</h5>
-                        <p class="text-muted small">Painless, single-visit root canal treatments utilizing advanced rotary endodontics.</p>
+                        <p class="text-muted small">Painless, single-visit root canal treatments utilizing advanced
+                            rotary endodontics.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card text-center">
                         <div class="service-icon"><i class="fas fa-shapes"></i></div>
                         <h5>Clear Aligners</h5>
-                        <p class="text-muted small">Invisible and removable orthodontic solutions for a perfect, confident smile.</p>
+                        <p class="text-muted small">Invisible and removable orthodontic solutions for a perfect,
+                            confident smile.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card text-center">
                         <div class="service-icon"><i class="fas fa-teeth"></i></div>
                         <h5>Braces</h5>
-                        <p class="text-muted small">Traditional and ceramic braces to correct misaligned teeth and bite issues effectively.</p>
+                        <p class="text-muted small">Traditional and ceramic braces to correct misaligned teeth and bite
+                            issues effectively.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card text-center">
                         <div class="service-icon"><i class="fas fa-screwdriver"></i></div>
                         <h5>Dental Implants</h5>
-                        <p class="text-muted small">Permanent, natural-looking tooth replacements to restore your beautiful smile and function.</p>
+                        <p class="text-muted small">Permanent, natural-looking tooth replacements to restore your
+                            beautiful smile and function.</p>
                     </div>
                 </div>
             </div>
@@ -469,7 +567,8 @@
                         <div class="feature-icon-box"><i class="fas fa-search"></i></div>
                         <div>
                             <h4>Root-Cause Treatment</h4>
-                            <p class="text-muted">We don't just treat symptoms. We diagnose and treat the underlying cause to prevent future issues.</p>
+                            <p class="text-muted">We don't just treat symptoms. We diagnose and treat the underlying
+                                cause to prevent future issues.</p>
                         </div>
                     </div>
                 </div>
@@ -478,7 +577,8 @@
                         <div class="feature-icon-box"><i class="fas fa-user-md"></i></div>
                         <div>
                             <h4>Personalized Care</h4>
-                            <p class="text-muted">Every smile is different. We create tailored treatment plans specifically designed for your oral health needs.</p>
+                            <p class="text-muted">Every smile is different. We create tailored treatment plans
+                                specifically designed for your oral health needs.</p>
                         </div>
                     </div>
                 </div>
@@ -487,7 +587,8 @@
                         <div class="feature-icon-box"><i class="fas fa-magic"></i></div>
                         <div>
                             <h4>Non-Invasive Methods</h4>
-                            <p class="text-muted">We utilize conservative, minimally invasive techniques whenever possible to preserve your natural tooth structure.</p>
+                            <p class="text-muted">We utilize conservative, minimally invasive techniques whenever
+                                possible to preserve your natural tooth structure.</p>
                         </div>
                     </div>
                 </div>
@@ -496,7 +597,8 @@
                         <div class="feature-icon-box"><i class="fas fa-heart"></i></div>
                         <div>
                             <h4>Compassionate Care</h4>
-                            <p class="text-muted">Our friendly staff ensures a stress-free environment, making your comfort our ultimate priority during every visit.</p>
+                            <p class="text-muted">Our friendly staff ensures a stress-free environment, making your
+                                comfort our ultimate priority during every visit.</p>
                         </div>
                     </div>
                 </div>
@@ -507,28 +609,33 @@
     <!-- 6. REVIEWS / TESTIMONIALS SECTION -->
     <section class="section-padding">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
+                data-aos="fade-up">
                 <div>
                     <h2 class="section-title mb-3">Patient Testimonials</h2>
                     <p class="text-muted mb-0">Don't just take our word for it—see what our patients have to say.</p>
                 </div>
                 <div class="mt-3 mt-md-0">
                     <div class="google-badge">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="20" class="me-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                            alt="Google Logo" width="20" class="me-2">
                         <span>Excellent <strong class="text-dark">4.9/5</strong></span>
                     </div>
                 </div>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="review-card">
                         <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-muted mb-4">"Absolutely wonderful experience. The staff is polite and the doctors explained my root canal procedure perfectly. Minimal pain and great results."</p>
+                        <p class="text-muted mb-4">"Absolutely wonderful experience. The staff is polite and the doctors
+                            explained my root canal procedure perfectly. Minimal pain and great results."</p>
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">AJ</div>
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 45px; height: 45px; font-weight: bold;">AJ</div>
                             <div>
                                 <h6 class="mb-0">Arjun Nair</h6>
                                 <small class="text-muted">Local Guide</small>
@@ -539,11 +646,15 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="review-card">
                         <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-muted mb-4">"Got my aligners from Smile Stone. The process was so smooth and the team is highly professional. My smile has transformed completely! Highly recommended clinics in Calicut."</p>
+                        <p class="text-muted mb-4">"Got my aligners from Smile Stone. The process was so smooth and the
+                            team is highly professional. My smile has transformed completely! Highly recommended clinics
+                            in Calicut."</p>
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">SM</div>
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 45px; height: 45px; font-weight: bold;">SM</div>
                             <div>
                                 <h6 class="mb-0">Sarah Mathew</h6>
                                 <small class="text-muted">Patient</small>
@@ -554,11 +665,14 @@
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="review-card">
                         <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="text-muted mb-4">"Very clean and hygienic environment. The doctors have amazing patience. Took my aged father for implants and they handled him with such compassion."</p>
+                        <p class="text-muted mb-4">"Very clean and hygienic environment. The doctors have amazing
+                            patience. Took my aged father for implants and they handled him with such compassion."</p>
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">RK</div>
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                                style="width: 45px; height: 45px; font-weight: bold;">RK</div>
                             <div>
                                 <h6 class="mb-0">Rahul Krishnan</h6>
                                 <small class="text-muted">Patient</small>
@@ -579,53 +693,65 @@
                         <h2 class="section-title text-center">Frequently Asked Questions</h2>
                         <p class="text-muted">Got questions? We've got answers.</p>
                     </div>
-                    
+
                     <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">
                                     Is root canal treatment painful?
                                 </button>
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    With modern dental techniques and anesthesia, root canal treatments are practically painless. Most patients compare the sensation to having a routine filling done. We ensure you're completely numb and comfortable before starting.
+                                    With modern dental techniques and anesthesia, root canal treatments are practically
+                                    painless. Most patients compare the sensation to having a routine filling done. We
+                                    ensure you're completely numb and comfortable before starting.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
                                     How long do clear aligners take to work?
                                 </button>
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Treatment time varies depending on the complexity of your case. On average, clear aligner treatments take between 6 to 18 months. You will typically see some movement within the first few weeks.
+                                    Treatment time varies depending on the complexity of your case. On average, clear
+                                    aligner treatments take between 6 to 18 months. You will typically see some movement
+                                    within the first few weeks.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
                                     Are dental implants safe?
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    Yes, dental implants are exceptionally safe and have a success rate of over 95%. They represent the gold standard for tooth replacement. Our clinic utilizes premium biocompatible materials for optimal safety and integration.
+                                    Yes, dental implants are exceptionally safe and have a success rate of over 95%.
+                                    They represent the gold standard for tooth replacement. Our clinic utilizes premium
+                                    biocompatible materials for optimal safety and integration.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
                                     What is the cost of treatments?
                                 </button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    The cost depends on the specific treatment plan required for your condition. We pride ourselves on transparent pricing. During your consultation, we provide a thorough estimate with no hidden charges.
+                                    The cost depends on the specific treatment plan required for your condition. We
+                                    pride ourselves on transparent pricing. During your consultation, we provide a
+                                    thorough estimate with no hidden charges.
                                 </div>
                             </div>
                         </div>
@@ -641,16 +767,18 @@
             <div class="contact-cta text-white" data-aos="zoom-in">
                 <div class="row g-0">
                     <div class="col-lg-5 d-none d-lg-block">
-                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Contact Us" class="contact-cta-img">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
+                            alt="Contact Us" class="contact-cta-img">
                     </div>
                     <div class="col-lg-7 p-5">
                         <h2 class="fw-bold mb-3">Ready for a Brighter Smile?</h2>
-                        <p class="mb-4 text-white-50">Book an appointment today and take the first step towards perfect dental health.</p>
-                        
+                        <p class="mb-4 text-white-50">Book an appointment today and take the first step towards perfect
+                            dental health.</p>
+
                         <div class="highlight-phone">
                             <i class="fas fa-phone-alt me-3"></i> +91 98765 43210
                         </div>
-                        
+
                         <form class="mt-2 text-dark">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -663,7 +791,9 @@
                                     <input type="email" class="form-control py-3" placeholder="Email Address">
                                 </div>
                                 <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-light btn-lg w-100 fw-bold text-primary rounded-pill">Book Appointment Now</button>
+                                    <button type="submit"
+                                        class="btn btn-light btn-lg w-100 fw-bold text-primary rounded-pill">Book
+                                        Appointment Now</button>
                                 </div>
                             </div>
                         </form>
@@ -675,64 +805,26 @@
 
     <!-- 9. FOOTER -->
     <footer>
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="fa-solid fa-tooth text-primary fs-2 me-2"></i>
-                        <span class="fs-3 fw-bold text-white">Smile <span class="text-primary">Stone</span></span>
-                    </div>
-                    <p class="mb-4">Bringing advanced dental care to Calicut with a focus on comprehensive root-cause treatments and compassionate patient care.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+        <div class="container text-center">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <i class="fa-solid fa-tooth text-primary fs-2 me-2"></i>
+                <span class="fs-3 fw-bold text-white">Smile <span class="text-primary">Stone</span></span>
+            </div>
+
+            <div class="d-flex justify-content-center gap-4 mb-3 text-muted flex-wrap">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-phone-alt text-primary me-2"></i>
+                    <span class="text-white">+91 98765 43210</span>
                 </div>
-                
-                <div class="col-lg-2 col-md-6">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home" class="footer-link">Home</a></li>
-                        <li class="mb-2"><a href="#about" class="footer-link">About Us</a></li>
-                        <li class="mb-2"><a href="#services" class="footer-link">Services</a></li>
-                        <li class="mb-2"><a href="#contact" class="footer-link">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5>Services</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="footer-link">Root Canal</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Clear Aligners</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Braces</a></li>
-                        <li class="mb-2"><a href="#" class="footer-link">Dental Implants</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h5>Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3 d-flex">
-                            <i class="fas fa-map-marker-alt text-primary mt-1 me-3"></i>
-                            <span>123 Dental Street, Calicut City, Kerala - 673001</span>
-                        </li>
-                        <li class="mb-3 d-flex">
-                            <i class="fas fa-phone-alt text-primary mt-1 me-3"></i>
-                            <span>+91 98765 43210</span>
-                        </li>
-                        <li class="mb-3 d-flex">
-                            <i class="fas fa-envelope text-primary mt-1 me-3"></i>
-                            <span>info@smilestone.com</span>
-                        </li>
-                    </ul>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-envelope text-primary me-2"></i>
+                    <span class="text-white">info@smilestone.com</span>
                 </div>
             </div>
-            
-            <div class="border-top border-secondary pt-4 mt-4 text-center">
-                <p class="mb-0 text-muted">&copy; 2026 Smile Stone Dental Clinic. All Rights Reserved.</p>
-            </div>
+
+            <hr class="border-secondary my-4">
+
+            <p class="mb-0 text-muted pb-3">&copy; 2026 Smile Stone Dental Clinic. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -759,4 +851,5 @@
         });
     </script>
 </body>
+
 </html>
