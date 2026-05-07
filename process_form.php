@@ -103,9 +103,15 @@ $headers .= "Reply-To: $from_email\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 if (mail($recipient_email, $subject, $email_content, $headers)) {
-    echo json_encode(["status" => "success", "message" => "Thank you! Your appointment request has been sent successfully."]);
+
+    header("Location: https://smilestonedentalclinic.com/contact-success");
+    exit();
+
 } else {
     http_response_code(500);
-    echo json_encode(["status" => "error", "message" => "There was a problem sending your message. Please try calling us instead."]);
+    echo json_encode([
+        "status" => "error",
+        "message" => "There was a problem sending your message. Please try calling us instead."
+    ]);
 }
 ?>
